@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile Card</title>
+  <link rel="stylesheet" href="lab2.css" />
+</head>
+<body>
+  <div class="card">
+    <h1 class="name">ABHISHEK SINGH KASHYAP</h1>
+
+    <div class="badge-box">
+      <div class="badge" id="badge-text">Developer</div>
+    </div>
+
+    <img src="Abhishek_formal.jpg" class="profile-pic" />
+
+    <p class="bio">
+      I am a passionate web developer learning to build cool websites using HTML, CSS, and JavaScript.
+      Skilled in MERN Stack, have been learning under the anudip foundation to try an get a full time role in the tech industry.
+    </p>
+  </div>
+
+  <script>
+    const badges = ["Developer", "JavaScript Dev", "Full Stack Dev", "MERN Stack", "React Dev"];
+    let i = 0;
+    const badgeText = document.getElementById("badge-text");
+
+    setInterval(() => {
+      i = (i + 1) % badges.length;
+      badgeText.textContent = badges[i];
+    }, 2000);
+  </script>
+</body>
+</html>
